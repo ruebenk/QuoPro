@@ -1,0 +1,113 @@
+.transition, form button, form label, form input {
+  transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+}
+* {
+  font-family: Helvetica, sans-serif;
+  font-weight: light;
+}
+.upload_file_container{
+   width:100px;
+   height:40px;
+   position:relative;
+   background(white);
+}
+
+.upload_file_container input{
+   width:100px;
+   height:40px;
+   position:absolute;
+   left:0;
+   top:0;
+   cursor:pointer;
+}
+html {
+  background-color: #EC8E40;
+}
+form {
+  position: relative;
+  display: inline-block;
+  max-width: 700px;
+  min-width: 500px;
+  box-sizing: border-box;
+  padding: 30px 25px;
+  background-color: white;
+  border-radius: 40px;
+  margin: 40px 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+form h1 {
+  color: #EC8E40;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  margin-left: 15px;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+}
+form button {
+  margin-top: 35px;
+  background-color: white;
+  border: 1px solid #EC8E40;
+  line-height: 0;
+  font-size: 17px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20px 15px;
+  border-radius: 60px;
+  color: #EC8E40;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+form button:hover, form button:focus {
+  color: white;
+  background-color: #EC8E40;
+}
+
+form label {
+  transform-origin: left center;
+  color: #EC8E40;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  font-size: 17px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  display: block;
+  position: absolute;
+  margin-top: -40px;
+  z-index: 2;
+  pointer-events: none;
+}
+form  input{
+  appearance: none;
+  background-color: none;
+  border: 1px solid #2A8CA4;
+  line-height: 0;
+  font-size: 17px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border-radius: 60px;
+  color: #2A8CA4;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+form input:focus {
+  outline: none;
+  background: #2A8CA4;
+  color: white;
+  margin-top: 30px;
+}
+form input:valid {
+  margin-top: 30px;
+}
+form input:focus ~ label {
+  transform: translate(0, -35px);
+}
+form  input:valid ~ label {
+  transform: translate(0px, -35px);	
+}
